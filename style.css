@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Sofadi One", system-ui;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 80%;
+  border-radius: 16px;
+  /* Due to max-width the content is strictly scattered in the 80% of the width and 
+  we center it with the help of the margin auto and also gave 2% to the top and bottom and left and right is auto,
+  so that it is in the center. */
+  margin: 2% auto;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+/* Profile header */
+.profile-container .profile-header {
+  position: relative;
+}
+
+.cover-img {
+  width: 100%;
+  height: 25vh;
+  /* height: 220px; */
+  object-fit: cover;
+  background: linear-gradient(
+    135deg,
+    #74ebd5,
+    #9face6
+  ); /* Gradient background */
+}
+
+/* profile details */
+.profile-details {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa; /* Subtle light grey */
+}
+
+/* Profile pic */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ddd;
+  margin-top: -16%;
+  object-fit: cover;
+  object-position: top;
+  /* margin-top: -75px; */
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* User-info */
+.user-info {
+  flex: 1;
+  margin-left: 3%;
+}
+
+.user-info .username {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.bio {
+  font-size: 1.3rem;
+  color: #666;
+  margin: 0.8% 0;
+}
+
+.location {
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.website-link {
+  color: #1e90ff; /* Bright blue for links */
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Statistical Section */
+
+.stats {
+  display: flex;
+  margin-top: 0.9%;
+}
+
+.stat {
+  margin-right: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.stat strong {
+  font-size: 1.5rem;
+  color: #007bff;
+  /* Bright blue for stats */
+  margin-right: 0.5rem;
+}
+
+.follow-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 1% 2%;
+  font-size: 1.1rem;
+  border-radius: 8%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+.follow-btn:hover {
+  background-color: #218838;
+}
+
+/* Post Section */
+
+.posts {
+  /* width: auto; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0% 2% 1% 2%;
+  gap: 1vw;
+}
+
+.post {
+  width: 28%;
+  height: auto;
+  padding: 1%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post h3,
+p {
+  margin: 1%;
+}
+
+.post:hover {
+  transform: translateY(2%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  margin-top: 1%;
+  font-size: 1rem;
+  height: 3vh;
+  text-align: center;
+  background-color: #f5f5f5;
+}
